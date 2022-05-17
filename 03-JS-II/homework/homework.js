@@ -186,13 +186,15 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   var esPrimo = true;
+  var rango=2;
 
   for(i=2; i < numero ; i++){ 
-    if (numero%2==0) {
+    if (numero%rango == 0 && numero==rango) {
       var esPrimo = false;
+
     }
   }
-
+  rango++;
   if (esPrimo==true) {
     return true;
   } else if(esPrimo==false){
