@@ -176,7 +176,7 @@ function operadoresLogicos(num1, num2, num3) {
   if(num3>num1 && num3>num2){
     num3++;
     return num3;
-  } else {return 'Error';}
+  } else {return false;}
 }
 
 function esPrimo(numero) {
@@ -185,23 +185,20 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if(numero==0 || numero==1){
-    return 'falso';
-  }
-  if(numero%numero==0 && numero%1==0){
-    
-      for (i=0; i<=numero; i++) {
-        numero%i==0;
+  var esPrimo = true;
 
-        console.log('Es Primo');
-        
-      }
-  } else{
-    return 'falso';
+  for(i=2; i < numero ; i++){ 
+    if (numero%2==0) {
+      var esPrimo = false;
+    }
   }
 
+  if (esPrimo==true) {
+    return true;
+  } else if(esPrimo==false){
+    return false;
+  }
 
-  
 }
 
 function esVerdadero(valor){
@@ -232,27 +229,26 @@ function tablaDelSeis(){
     return resultados;
 }
 
-function tieneTresDigitos(numero){
-  //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
-  //Escribe tu código aquí
-  var contador= 0;
-  
-  while (numero>=1) {
-    contador++;
-    numero = numero/10;
+    function tieneTresDigitos(numero){
+      //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
+      //Escribe tu código aquí
+      var contador = 0;
+      var numeroEntero = parseInt(numero);
+      while(numeroEntero>=1){
+        contador = contador+1;
+        numeroEntero = Math.trunc(numeroEntero/10);
+      }
+      //return contador;
 
-    if(contador==3){
-      return true;
-    } else {
-      return false;
+      if(contador == 3){
+        return true;
+      } else {
+        return false;
+      }
+
+
+
     }
-  }
-  //return contador;
-
-
-
-  
-}
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
