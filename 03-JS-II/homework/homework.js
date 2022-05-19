@@ -192,9 +192,10 @@ function esPrimo(numero) {
     if (numero%rango == 0 && numero==rango) {
       var esPrimo = false;
 
-    }
+    } 
+    rango++;
   }
-  rango++;
+  
   if (esPrimo==true) {
     return true;
   } else if(esPrimo==false){
