@@ -26,6 +26,16 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  let array2 = [];
+  let totalElementos = array.length;
+
+  for(i=0;i<totalElementos;i++){
+    let elemento = (array[i]+1);
+    array2.push(elemento);
+    
+  }
+  
+  return array2;
 
 }
 
@@ -84,6 +94,16 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let sum = 0;
+  let totalElementos = numeros.length;
+
+  for(i=0;i<totalElementos;i++){
+    let elemento = numeros[i];
+    sum = sum + elemento;
+    
+  }
+  
+  return sum;
   
 }
 
@@ -92,6 +112,18 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var totalElementos = resultadosTest.length;
+  let sum = 0;
+
+  for(i=0;i<totalElementos;i++){
+    let elemento = resultadosTest[i];
+    sum = sum + elemento;
+
+  }
+  
+  let promedioPuntajes = sum / totalElementos;
+  return promedioPuntajes;
+
 }
 
 
@@ -99,6 +131,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  
 }
 
 
@@ -120,7 +153,18 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
+  //Escribe tu código aquí
+    diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+    
+    if(numeroDeDia == 0 || numeroDeDia == 6){
+        //var finSemana = diasSemana[numeroDeDia];
+        return 'Es fin de semana';
+    } else if(numeroDeDia>=7) {
+        return 'El numero del dia ingresado no existen, ingrese un numero entre 0 y 6';
+    } else{
+        return 'Es dia laboral';
+    }
+
   
 } 
 
@@ -129,6 +173,8 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  
+
   
 }
 
