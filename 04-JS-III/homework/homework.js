@@ -131,7 +131,17 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let largoArray = numeros.length;
+  let Numeromayor = 0;
+
+  for(i=0;i<largoArray;i++){
+    if(numeros[i]>Numeromayor){
+      Numeromayor = numeros[i];
+    }
+  }
   
+  return Numeromayor;
+
 }
 
 
@@ -139,12 +149,24 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  let newArray = [];
+  let longitudArray = arreglo.length;
+
+  for(i=0;i<longitudArray;i++){
+    if(arreglo[i]>18){
+      newArray.push(arreglo[i]);
+    }
+  }
+
+  let cantidadElementos = newArray.length;
+  return cantidadElementos;
 
 }
 
@@ -154,18 +176,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí
-    diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
-    
-    if(numeroDeDia == 0 || numeroDeDia == 6){
-        //var finSemana = diasSemana[numeroDeDia];
-        return 'Es fin de semana';
-    } else if(numeroDeDia>=7) {
-        return 'El numero del dia ingresado no existen, ingrese un numero entre 0 y 6';
-    } else{
-        return 'Es dia laboral';
-    }
-
+   
   
+
+    
+ 
 } 
 
 
@@ -199,6 +214,18 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+
+  let nuevoArray = [];
+  let longitudArray = array.length;
+
+  for(i=0;i<longitudArray;i++){
+      if(array[i]>100 && array[i]<=200){
+        nuevoArray.push(array[i]);
+      }
+  return nuevoArray;
+  }
+
+  
 }
 
 
