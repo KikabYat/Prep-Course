@@ -149,7 +149,18 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  longitudArgumento = arguments.length;
+  if(longitudArgumento<1){
+    return 0;
+  }
   
+  let producto = 1;
+  for(i=0;i<longitudArgumento;i++){
+    producto = producto * arguments[i];
+  }
+
+  return producto;
+
 }
 
 
@@ -177,9 +188,37 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí
    
-  
-
+  switch (numeroDeDia) {
+    case 1:
+      return "Es fin de semana";
+    break;
     
+    case 2:
+      return "Es dia Laboral";
+    break;
+
+    case 3:
+      return "Es dia Laboral";
+    break;
+
+    case 4:
+      return "Es dia Laboral";
+    break;
+
+    case 5:
+      return "Es dia Laboral";
+    break;
+
+    case 6:
+      return "Es dia Laboral";
+    break;
+
+    case 7:
+      return "Es fin de semana"
+    break;
+
+  }
+     
  
 } 
 
@@ -188,16 +227,42 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  let numeroString = n.toString();
+  let primerCaracter = numeroString[0];
+ 
+  if(primerCaracter == '9'){
+    return true;
+  } else {
+    return false;
+  }
   
-
-  
+   
 }
 
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
+  //Escribe tu código aquí 
+  let longitudArreglo = arreglo.length;
+  let Elemento=arreglo[0];
+  
+
+  for(i=1;i<longitudArreglo;i++){
+    if(Elemento==arreglo[i]){
+           Elemento = arreglo[i];
+          
+    } else {
+      return false;
+      //break;
+    }
+    
+  }
+
+  if(i==longitudArreglo){
+    return true;
+  }
+
   
 } 
 
@@ -207,6 +272,24 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  let longitudArray = array.length;
+  let newArrayMonth = [];
+
+
+  for(i=0;i<longitudArray;i++){
+    if(array[i] == 'Enero' || array[i] == 'Marzo' || array[i] == 'Noviembre'){
+      newArrayMonth.push(array[i]);
+    }
+  }
+
+  if(newArrayMonth.length<3){
+    return 'No se encontraron los meses pedidos';
+    
+  }
+  
+  if (newArrayMonth.length==3){
+    return newArrayMonth;
+  }
 }
 
 
@@ -222,10 +305,10 @@ function mayorACien(array) {
       if(array[i]>100 && array[i]<=200){
         nuevoArray.push(array[i]);
       }
-  return nuevoArray;
-  }
-
   
+  } 
+
+  return nuevoArray;  
 }
 
 
@@ -237,6 +320,22 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+    
+  let array = [];
+
+
+  for(i=0;i<=9;i++){
+    numero = numero+2;
+    array.push(numero);
+
+    if(numero == i){
+      return "Se interrumpió la ejecución";
+      break;
+    }
+      
+  }
+  return array;
+
 }
 
 
@@ -247,6 +346,21 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let array=[];
+
+
+
+  for(i=0;i<9;i++){
+    numero = numero+2;
+    array.push(numero);
+
+    if(i==5){
+      continue;
+    }
+
+  }
+
+  return array;
 }
 
 

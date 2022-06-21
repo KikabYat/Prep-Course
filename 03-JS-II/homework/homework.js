@@ -185,22 +185,21 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  var esPrimo = true;
-  var rango=2;
+  let miArray = [2,3,5,7,11];
+  let longitudArray = miArray.length;
+  let number = 2;
 
-  for(i=2; i < numero ; i++){ 
-    if (numero%rango == 0 && numero==rango) {
-      var esPrimo = false;
+  for(i=0;i<longitudArray;i++){
+    if(number == miArray[i]){
+      return true;
+    }
 
-    } 
-    rango++;
+    if(number % miArray[i] == 0){
+      return false;
+    }
   }
-  
-  if (esPrimo==true) {
-    return true;
-  } else if(esPrimo==false){
-    return false;
-  }
+
+
 
 }
 
